@@ -6,8 +6,9 @@
         <title>
             Settings
         </title>
-        <link rel="stylesheet" type="text/css" href="css/settings.css">
+        <script src="js/userData.js"></script>
         <script src="js/settings.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/settings.css">
     </head>
     <body onload="checkChange()">
         <div class="userInputs">
@@ -20,25 +21,29 @@
                     <option value="month" onclick="checkChange()">Monthly</option>
                     <option value="year" onclick="checkChange()">Yearly</option>
                 </select>
-                <div>
+                <div class="spacer">
                     <form id="hour">
-                        <p>Enter hourly pay: </p>
+                        <label>Enter hourly pay: </label>
                         <input class="textField" type="text" id="hourly" placeholder="$ per hour">
                         <br>
-                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                        <button class="submitBtn"  onclick="setValues(0)">
+                            Update
+                        </button>
                     </form>
                     <form id="day">
-                        <p>Enter daily pay: </p>
+                        <label>Enter daily pay: </label>
                         <input class="textField" type="text" id="daily" placeholder="$ earned daily">
                         <br>
                         <label>Hours Worked Daily</label>
                         <br>
                         <input class="textField" type="text" id="hourDay" placeholder="(optional)">
                         <br>
-                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                        <button class="submitBtn"  onclick="setValues(1)">
+                            Update
+                        </button>
                     </form>
                     <form id="month">
-                        <p>Enter monthly pay: </p>
+                        <label>Enter monthly pay: </label>
                         <input class="textField" type="text" id="monthly" placeholder="$ per month">
                         <br>
                         <label>Days Worked per Week</label>
@@ -49,10 +54,12 @@
                         <br>
                         <input class="textField" type="text" id="mHours" placeholder="(optional)">
                         <br>
-                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                        <button class="submitBtn"  onclick="setValues(2)">
+                            Update
+                        </button>
                     </form>
                     <form id="year">
-                        <p>Enter yearly pay: </p>
+                        <label>Enter yearly pay: </label>
                         <input class="textField" type="text" id="yearly" placeholder="$ per year">
                         <br>
                         <label>Days Worked per Week</label>
@@ -63,7 +70,9 @@
                         <br>
                         <input class="textField" type="text" id="yHours" placeholder="(optional)">
                         <br>
-                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                        <button class="submitBtn"  onclick="setValues(3)">
+                            Update
+                        </button>
                     </form>
                 </div>
             </div>

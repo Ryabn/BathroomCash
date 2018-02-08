@@ -1,4 +1,3 @@
-var strgLocDat = window.localStorage;
 var updateTimeInterval;
 
 function timerTriggered(){
@@ -52,7 +51,6 @@ function calculateMoney(hours, minutes, seconds){
     var money = strgLocDat.getItem("salary") * time;
     console.log(money);
     document.getElementById("moneyEarned").innerHTML = "You Earned: $" + Math.floor(money) + "." + adjust(Math.floor(money*100%100));
-    
 }
 function adjust(number){
     if(number < 10){
@@ -68,28 +66,6 @@ function changeToStart(){
     document.getElementsByTagName('h1')[0].innerHTML = "Start";
 }
 //resets UI
-function firstTimeLoad(){
-    if(strgLocDat.getItem("loadedBefore") != 1){
-        setUp();
-    }else{
-        restorePreviousSession();
-    }
-}
-//
-function setUp(){
-    strgLocDat.setItem("loadedBefore", 1);
-    strgLocDat.setItem("timerStart", 0);
-    strgLocDat.setItem("salary", 0.00291666);
-    strgLocDat.setItem("breakNum", 0);
-    
-    strgLocDat.setItem("loadedBefore", 1);
-    
-    strgLocDat.setItem("payHourly", -1);
-    
-    strgLocDat.setItem("payDaily", -1);
-    
-    strgLocDat.setItem("payYearly", -1);
-}
 //needs work
 function restorePreviousSession(){
     if(strgLocDat.getItem("timerStart") == 1){
@@ -98,8 +74,6 @@ function restorePreviousSession(){
         changeToEnd();
     }
 }
-//needs work
-//add so that if timer is still running, set as running UI
 function redirectDetails(){
     window.location = "details.html";
 }

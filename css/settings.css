@@ -17,6 +17,9 @@ select{
 form{
     display: none;
 }
+.spacer{
+    margin-top: 2vh;
+}
 .overflow{
     overflow-y: scroll;
     height: 60vh;
