@@ -81,16 +81,11 @@ function setUp(){
     strgLocDat.setItem("salary", 0.00291666);
     
     strgLocDat.setItem("loadedBefore", 1);
-    strgLocDat.setItem("h", -1);
     strgLocDat.setItem("payHourly", -1);
     
-    strgLocDat.setItem("d", -1);
     strgLocDat.setItem("payDaily", -1);
-    strgLocDat.setItem("dHoursPerDay", -1);
     
-    strgLocDat.setItem("y", -1);
-    strgLocDat.setItem("sdf", -1);
-    strgLocDat.setItem("yHoursPerDay", -1);
+    strgLocDat.setItem("payYearly", -1);
     
     strgLocDat.setItem("loadedBefore", 1);
 }
