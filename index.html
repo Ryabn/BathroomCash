@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>
             Bathroom Cash
         </title>
@@ -9,8 +10,21 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     
-    <body>
+    <body onload="firstTimeLoad()">
         <div>
+            <div class="informationWrapper">
+                <div class="details smallBtn" onclick="redirectDetails()">
+                    View Details
+                </div>
+                <div class="settings smallBtn" onclick="redirectSetup()">
+                    Change Settings
+                </div>
+            </div>
+            <div id="bathroomBreakButton" onclick="timerTriggered()">
+                <h1>
+                    Start
+                </h1>
+            </div>
         </div>
     </body>
 </html>
