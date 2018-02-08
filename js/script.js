@@ -77,21 +77,22 @@ function firstTimeLoad(){
 }
 //
 function setUp(){
+    strgLocDat.setItem("loadedBefore", 1);
     strgLocDat.setItem("timerStart", 0);
     strgLocDat.setItem("salary", 0.00291666);
     
     strgLocDat.setItem("loadedBefore", 1);
+    
     strgLocDat.setItem("payHourly", -1);
     
     strgLocDat.setItem("payDaily", -1);
     
     strgLocDat.setItem("payYearly", -1);
-    
-    strgLocDat.setItem("loadedBefore", 1);
 }
 //needs work
 function restorePreviousSession(){
     if(strgLocDat.getItem("timerStart") == 1){
+        updateTime();
         updateTimeInterval = setInterval(updateTime, 1000);
         changeToEnd();
     }
