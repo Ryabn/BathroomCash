@@ -15,7 +15,8 @@ function endTimer(){
 }
 function changeToEnd(){
     var buttonStyle = document.getElementById('bathroomBreakButton');
-    buttonStyle.style.backgroundColor = "#b71727";
+    buttonStyle.style.backgroundColor = "#fffb31";
+    buttonStyle.style.color = "black";
     document.getElementsByTagName('h1')[0].innerHTML = "End";
 }
 
@@ -25,6 +26,7 @@ function startTimer(){
 function changeToStart(){
     var buttonStyle = document.getElementById('bathroomBreakButton');
     buttonStyle.style.backgroundColor = null;
+    buttonStyle.style.color = null;
     document.getElementsByTagName('h1')[0].innerHTML = "Start";
 }
 function firstTimeLoad(){

@@ -13,13 +13,24 @@
     <body onload="firstTimeLoad()">
         <div>
             <div class="informationWrapper">
+                <div class="info">
+                    <h2>Break #1</h2>
+                    <div id="timeElapsed">
+                        00:00:00
+                    </div>
+                    <div id="moneyEarned">
+                        Money Earned: $ 0.00
+                    </div>
+                </div>
+
                 <div class="details smallBtn" onclick="redirectDetails()">
-                    View Details
+                    Details
                 </div>
                 <div class="settings smallBtn" onclick="redirectSetup()">
-                    Change Settings
+                    Settings
                 </div>
             </div>
+            
             <div id="bathroomBreakButton" onclick="timerTriggered()">
                 <h1>
                     Start
