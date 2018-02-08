@@ -80,6 +80,7 @@ function setUp(){
     strgLocDat.setItem("loadedBefore", 1);
     strgLocDat.setItem("timerStart", 0);
     strgLocDat.setItem("salary", 0.00291666);
+    strgLocDat.setItem("breakNum", 0);
     
     strgLocDat.setItem("loadedBefore", 1);
     

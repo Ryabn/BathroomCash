@@ -1,4 +1,72 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Settings
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/settings.css">
+        <script src="js/settings.js"></script>
+    </head>
+    <body onload="checkChange()">
+        <div class="userInputs">
+            <h1>Settings</h1>
+            <div class="overflow">
+                <label class="payTitle">Pay Type:</label>
+                <select id="select">
+                    <option value="hour" onclick="checkChange()">Hourly</option>
+                    <option value="day" onclick="checkChange()">Daily</option>
+                    <option value="month" onclick="checkChange()">Monthly</option>
+                    <option value="year" onclick="checkChange()">Yearly</option>
+                </select>
+                <div>
+                    <form id="hour">
+                        <p>Enter hourly pay: </p>
+                        <input class="textField" type="text" id="hourly" placeholder="$ per hour">
+                        <br>
+                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                    </form>
+                    <form id="day">
+                        <p>Enter daily pay: </p>
+                        <input class="textField" type="text" id="daily" placeholder="$ earned daily">
+                        <br>
+                        <label>Hours Worked Daily</label>
+                        <br>
+                        <input class="textField" type="text" id="hourDay" placeholder="(optional)">
+                        <br>
+                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                    </form>
+                    <form id="month">
+                        <p>Enter monthly pay: </p>
+                        <input class="textField" type="text" id="monthly" placeholder="$ per month">
+                        <br>
+                        <label>Days Worked per Week</label>
+                        <br>
+                        <input class="textField" type="text" id="mDays" placeholder="(optional)">
+                        <br>
+                        <label>Hours Worked Daily</label>
+                        <br>
+                        <input class="textField" type="text" id="mHours" placeholder="(optional)">
+                        <br>
+                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                    </form>
+                    <form id="year">
+                        <p>Enter yearly pay: </p>
+                        <input class="textField" type="text" id="yearly" placeholder="$ per year">
+                        <br>
+                        <label>Days Worked per Week</label>
+                        <br>
+                        <input class="textField" type="text" id="yDays" placeholder="(optional)">
+                        <br>
+                        <label>Hours Worked Daily</label>
+                        <br>
+                        <input class="textField" type="text" id="yHours" placeholder="(optional)">
+                        <br>
+                        <input class="submitBtn" type="submit" onclick="setValues()" value="Update">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
