@@ -1,4 +1,4 @@
-var updateTimeInterval;
+var updateTimeInterval, money;
 
 function timerTriggered(){
     if(strgLocDat.getItem("timerStart") == 0){
@@ -11,6 +11,18 @@ function timerTriggered(){
 }
 function endTimer(){
     strgLocDat.setItem("timerStart", 0);
+    var finalTime = new Date();
+    var jsonData = {
+        "hours": strgLocDat.getItem("tHours"),
+        "minutes":  strgLocDat.getItem("tMinutes"),
+        "seconds": strgLocDat.getItem("tSeconds"),
+        "fHours": finalTime.getHours(),
+        "fMinutes": finalTime.getMinutes(),
+        "fSeconds": finalTime.getSeconds(),
+        "pay": money
+    }
+    userDataJSON['days'][dayCodes[finalTime.getDay()]].push(jsonData);
+    storeNewBreaks(userDataJSON);
     clearInterval(updateTimeInterval);
 }
 function changeToEnd(){
@@ -48,8 +60,7 @@ function updateTime(){
 }
 function calculateMoney(hours, minutes, seconds){
     var time = seconds + minutes*60 + hours*360;
-    var money = strgLocDat.getItem("salary") * time;
-    console.log(money);
+    money = strgLocDat.getItem("salary") * time;
     document.getElementById("moneyEarned").innerHTML = "You Earned: $" + Math.floor(money) + "." + adjust(Math.floor(money*100%100));
 }
 function adjust(number){

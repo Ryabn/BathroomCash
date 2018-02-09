@@ -34,6 +34,7 @@ h2{
     float: right;
 }
 .smallBtn{
+    border: 1px solid white;
     color: white;
     border-radius: 5vw;
     text-align: center;
@@ -49,7 +50,7 @@ h2{
     background-color: white;
 }
 #timeElapsed{
-    font-size: 10vh;
+    font-size: 9vh;
 }
 #moneyEarned{
     font-size: 4vh;

@@ -10,40 +10,43 @@
         <script src="js/settings.js"></script>
         <link rel="stylesheet" type="text/css" href="css/settings.css">
     </head>
-    <body onload="checkChange()">
+    <body onload="checkChange(); startCheck();">
         <div class="userInputs">
             <h1>Settings</h1>
             <div class="overflow">
                 <label class="payTitle">Pay Type:</label>
                 <select id="select">
-                    <option value="hour" onclick="checkChange()">Hourly</option>
-                    <option value="day" onclick="checkChange()">Daily</option>
-                    <option value="month" onclick="checkChange()">Monthly</option>
-                    <option value="year" onclick="checkChange()">Yearly</option>
+                    <option value="hour">Hourly</option>
+                    <option value="day">Daily</option>
+                    <option value="month">Monthly</option>
+                    <option value="year">Yearly</option>
                 </select>
                 <div class="spacer">
                     <form id="hour">
                         <label>Enter hourly pay: </label>
+                        <br>
                         <input class="textField" type="text" id="hourly" placeholder="$ per hour">
                         <br>
-                        <button class="submitBtn"  onclick="setValues(0)">
+                        <div class="submitBtn"  onclick="setValues(0)">
                             Update
-                        </button>
+                        </div>
                     </form>
                     <form id="day">
                         <label>Enter daily pay: </label>
+                        <br>
                         <input class="textField" type="text" id="daily" placeholder="$ earned daily">
                         <br>
                         <label>Hours Worked Daily</label>
                         <br>
                         <input class="textField" type="text" id="hourDay" placeholder="(optional)">
                         <br>
-                        <button class="submitBtn"  onclick="setValues(1)">
+                        <div class="submitBtn"  onclick="setValues(1)">
                             Update
-                        </button>
+                        </div>
                     </form>
                     <form id="month">
                         <label>Enter monthly pay: </label>
+                        <br>
                         <input class="textField" type="text" id="monthly" placeholder="$ per month">
                         <br>
                         <label>Days Worked per Week</label>
@@ -54,12 +57,13 @@
                         <br>
                         <input class="textField" type="text" id="mHours" placeholder="(optional)">
                         <br>
-                        <button class="submitBtn"  onclick="setValues(2)">
+                        <div class="submitBtn"  onclick="setValues(2)">
                             Update
-                        </button>
+                        </div>
                     </form>
                     <form id="year">
                         <label>Enter yearly pay: </label>
+                        <br>
                         <input class="textField" type="text" id="yearly" placeholder="$ per year">
                         <br>
                         <label>Days Worked per Week</label>
@@ -70,10 +74,13 @@
                         <br>
                         <input class="textField" type="text" id="yHours" placeholder="(optional)">
                         <br>
-                        <button class="submitBtn"  onclick="setValues(3)">
+                        <div class="submitBtn"  onclick="setValues(3)">
                             Update
-                        </button>
+                        </div>
                     </form>
+                    <div class="backBtn" onclick="return redirect()">
+                        Home
+                    </div>
                 </div>
             </div>
         </div>

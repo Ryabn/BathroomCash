@@ -1,6 +1,9 @@
 var paySelected;
 var names = ["hour", "day", "month", "year"];
 
+function startCheck(){
+    setInterval(checkChange, 1000);
+}
 function changeFields(inputType){
     hideAll();
     paySelected = inputType;
@@ -74,4 +77,10 @@ function getYear(){
 
 function calculateSalary(salarySecond){
     strgLocDat.setItem("salary", salarySecond);
+    alert("Salary Updated!");
+    redirect();
+}
+function redirect(){
+    window.location = 'index.html';
+    return false;
 }

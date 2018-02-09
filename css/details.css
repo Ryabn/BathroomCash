@@ -1,0 +1,64 @@
+@font-face{
+    font-family: 'Varela-Round';
+    src: url("../fonts/Varela_Round/VarelaRound-Regular.ttf");
+}
+body{
+    font-family: 'Varela-Round';
+}
+h1{
+    text-align: center;
+}
+.wrapper{
+    margin: 2vh 2vw 0 2vw;
+    border-radius: 15vw;
+    padding: 2vw;
+    background-color: grey;
+    border: 1vw solid grey;
+    height: 88vh;
+}
+.home{
+    float: left;
+    margin-left: 20vw;
+    color: lightgreen;
+    border: 1px solid lightgreen;
+    
+}
+.settings{
+    margin-right: 20vw;
+    float: right;
+    color: darkgray;
+    border: 1px solid grey;
+}
+.backBtn{
+    height: 3vh;
+    padding: 0.5vh;
+    width: 20vw;
+    text-align: center;
+    border-radius: 2vh;
+    margin-top: 1vh;
+}
+#breakGraphic{
+    background-color: white;
+    border-radius: 7vh 7vh 2vh 2vh;
+    margin-bottom: 2vh;
+    padding-top: 1vh;
+    height: 27vh;
+}
+#moneyGraphic{
+    background-color: white;
+    border-radius: 2vh 2vh 2vh 2vh;
+    margin-bottom: 2vh;
+    padding-top: 1vh;
+    height: 27vh;
+}
+#extraInformation{
+    background-color: white;
+    border-radius: 2vh 2vh 7vh 7vh;
+    height: 24vh;
+    padding: 2vh;
+    overflow-y: scroll;
+}
+#breakTimes{
+}
+#moneyMade{
+}

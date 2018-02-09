@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Details
+        </title>
+        <script src="js/Chart.bundle.min.js"></script>
+        <script src="js/userData.js"></script>
+        <script src="js/details.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/details.css">
+    </head>
+    <body onload="firstTimeLoad(); load();">
+        <div class="wrapper">
+            <div id="breakGraphic">
+                <canvas id="breakTimes"></canvas>
+            </div>
+            <div id="moneyGraphic">
+                <canvas id="moneyMade"></canvas>
+            </div>
+            <div id="extraInformation">
+                <h1>Detailed information</h1>
+            </div>
+        </div>
+        <div class="backBtn home" onclick="redirectHome();">
+            Home
+        </div>
+        <div class="backBtn settings" onclick="redirectHome();">
+            Settings
+        </div>
+    </body>
+</html>

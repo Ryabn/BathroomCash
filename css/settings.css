@@ -45,6 +45,18 @@ form{
     border-radius: 5vh;
     padding: 2vh;
 }
+.backBtn{
+    color: darkgray;
+    background-color: white;
+    border: 1px solid grey;
+    margin: 0 auto;
+    height: 3vh;
+    padding: 1vh;
+    width: 20vw;
+    text-align: center;
+    border-radius: 2vh;
+    margin-top: 1vh;
+}
 .submitBtn{
     font-family: 'Varela-Round';
     font-size: 3vh;
@@ -55,6 +67,7 @@ form{
     border-radius: 5vh;
     border: 1px solid gray;
     padding: 1.5vh;
+    margin: 0 auto;
 }
 .submitBtn:active{
     background-color: darkgreen;
