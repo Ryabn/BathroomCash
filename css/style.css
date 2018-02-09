@@ -3,6 +3,7 @@
     src: url("../fonts/Varela_Round/VarelaRound-Regular.ttf");
 }
 body{
+    margin: 0;
     background-color: white;
     font-family: 'Varela-Round';
 }
@@ -16,7 +17,7 @@ h2{
     margin: 0;
 }
 .informationWrapper{
-    margin: 5vh 2vw 5vh 2vw;
+    margin: 5vh 4vw 5vh 4vw;
     border-radius: 15vw;
     padding: 2vw;
     background-color: grey;
@@ -24,18 +25,19 @@ h2{
     height: 40vh;
 }
 .details{
-    background-color: green;
+    border: 1px solid #b2ffc4;
+    color: #b2ffc4;
     margin-left: 4vw;
     float: left;
 }
 .settings{
-    background-color: purple;
+    border: 1px solid #cfaaff;
+    color: #cfaaff;
     margin-right: 4vw;
     float: right;
 }
 .smallBtn{
-    border: 1px solid white;
-    color: white;
+    background-color: grey;
     border-radius: 5vw;
     text-align: center;
     padding: 1vw;

@@ -22,6 +22,11 @@ function endTimer(){
         "pay": money
     }
     userDataJSON['days'][dayCodes[finalTime.getDay()]].push(jsonData);
+    if(finalTime.getDay() >= 6){
+        userDataJSON['days'][dayCodes[0]].length = 0;
+    }else{
+        userDataJSON['days'][dayCodes[finalTime.getDay()+1]].length = 0;
+    }
     storeNewBreaks(userDataJSON);
     clearInterval(updateTimeInterval);
 }

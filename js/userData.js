@@ -2,26 +2,26 @@ var strgLocDat = window.localStorage;
 var userDataJSON;
 
 var dayCodes = ["sun", "mon", "tues", "wed", "thur", "fri", "sat"];
+var dayCodesMoney = [];
 
 var breaksTemplate = {
 	"days": {
+        "sun": [],
 		"mon": [],
 		"tues": [],
         "wed": [],
+        "thur": [],
         "fri": [],
-        "sat": [],
-        "sun": []
+        "sat": []
 	}
 }
 function firstTimeLoad(){
     if(strgLocDat.getItem("loadedBefore") != 1){
         setUp();
-        userDataJSON = getPastBreaks();
-        alert("It looks like this is the first time you're using this app! Click on the settings button to first set your salary so we can calculate your earnings while using the restroom. ")
-    }else{
-        restorePreviousSession();
-        userDataJSON = getPastBreaks();
+        alert("It looks like this is the first time you're using this app! Click on the settings button to first set your salary so we can calculate your earnings while using the restroom.");
     }
+    userDataJSON = getPastBreaks();
+    restorePreviousSession();
 }
 function setUp(){
     strgLocDat.setItem("loadedBefore", 1);
